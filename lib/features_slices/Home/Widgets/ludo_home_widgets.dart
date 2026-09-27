@@ -29,7 +29,6 @@ class LudoHomeWidgets {
                     color: ZiColors.white,
                     width: context.widthPct(0.007),
                   ),
-                  
                 ),
                 child: Icon(
                   Icons.person,
@@ -124,7 +123,7 @@ class LudoHomeWidgets {
   static Widget logo(BuildContext context) {
     return Image.asset(
       'assets/Ludo_Logo.png',
-      width: context.widthPct(0.48),
+      width: context.widthPct(0.50),
       height: context.heightPct(0.105),
       fit: BoxFit.contain,
     );
@@ -478,13 +477,16 @@ class LudoHomeWidgets {
           Text(
             title,
             textAlign: TextAlign.center,
-            style: ZiTypoStyles.titleLg.copyWith(color: AppColors.darkText, shadows: [
-              Shadow(
-                color: Colors.black.withValues(alpha: 0.25),
-                offset: Offset(0, context.heightPct(0.004)),
-                blurRadius: context.widthPct(0.004),
-              ),
-            ]),
+            style: ZiTypoStyles.titleLg.copyWith(
+              color: AppColors.darkText,
+              shadows: [
+                Shadow(
+                  color: Colors.black.withValues(alpha: 0.25),
+                  offset: Offset(0, context.heightPct(0.004)),
+                  blurRadius: context.widthPct(0.004),
+                ),
+              ],
+            ),
           ),
 
           SizedBox(height: context.heightPct(0.004)),
