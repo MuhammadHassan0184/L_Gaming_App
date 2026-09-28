@@ -39,40 +39,57 @@ class AppColors {
 
   static const Color borderLight = Color(0xFFE2DFF0);
 
+  // ============================================================
+  // Country Screen Colors
+  // ============================================================
+
+  static const Color countryBackground = Color(0xFFF4F2FA);
+
+  static const Color countryHeaderStart = Color(0xFFFFE9E5);
+  static const Color countryHeaderMiddle = Color(0xFFF4E5F7);
+  static const Color countryHeaderEnd = Color(0xFFE5E2FC);
+
+  static const Color countryCard = Color(0xFFF0F1F3);
+
+  static const Color countrySelected = Color(0xFFE7D5F5);
+
+  static const Color countrySelectedBorder = Color(0xFF8A4BB8);
+
+  static const Color countryText = Color(0xFF27242C);
+
+  static const Color countryMutedText = Color(0xFF8B8791);
+
+  static const Color countryActive = Color(0xFF1F1C24);
+
+  static const Color countryCheck = Color(0xFF111015);
+
+  static const LinearGradient countryHeaderGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [countryHeaderStart, countryHeaderMiddle, countryHeaderEnd],
+  );
+
   static const LinearGradient headerGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [
-      Color(0xFFFFE7EF),
-      Color(0xFFEBDCF8),
-      Color(0xFFE3E5FF),
-    ],
+    colors: [Color(0xFFFFE7EF), Color(0xFFEBDCF8), Color(0xFFE3E5FF)],
   );
 
   static const LinearGradient yellowGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [
-      yellowStart,
-      yellowEnd,
-    ],
+    colors: [yellowStart, yellowEnd],
   );
 
   static const LinearGradient startGradient = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
-    colors: [
-      yellowButtonStart,
-      yellowButtonEnd,
-    ],
+    colors: [yellowButtonStart, yellowButtonEnd],
   );
 
   static const LinearGradient greenGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [
-      greenCardStart,
-      greenCardEnd,
-    ],
+    colors: [greenCardStart, greenCardEnd],
   );
 }

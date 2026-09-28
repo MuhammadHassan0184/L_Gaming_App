@@ -32,7 +32,7 @@ class LudoHomeWidgets {
                 ),
                 child: Icon(
                   Icons.person,
-                  color: AppColors.darkText,
+                  color: ZiColors.surface,
                   size: context.scaledFont(20),
                 ),
               ),
