@@ -92,4 +92,48 @@ class AppColors {
     end: Alignment.bottomRight,
     colors: [greenCardStart, greenCardEnd],
   );
+
+  // ============================================================
+  // Recharge Screen Colors
+  // ============================================================
+
+  static const Color rechargeBackground = ludoBackground;
+
+  static const Color rechargeHeaderStart = countryHeaderStart;
+  static const Color rechargeHeaderMiddle = countryHeaderMiddle;
+  static const Color rechargeHeaderEnd = countryHeaderEnd;
+
+  static const Color rechargeGold = gold;
+
+  static const Color rechargeBenefitsStart = Color(0xFFF4E0E7);
+
+  static const Color rechargeBenefitsEnd = Color(0xFFDCC8F6);
+
+  static const Color rechargeInfoBackground = Color(0xFFEFEAF2);
+
+  static const Color rechargeFirstBackground = Color(0xFFF0E1E8);
+
+  static const Color rechargeBadge = Color(0xFFB993E8);
+
+  static const Color rechargeSelectedCard = Color(0xFFFFFFFF);
+
+  static const Color rechargeBotBackground = Color(0xFFE5D9F8);
+
+  static const LinearGradient rechargeHeaderGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [rechargeHeaderStart, rechargeHeaderMiddle, rechargeHeaderEnd],
+  );
+
+  static const LinearGradient rechargeBenefitsGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [rechargeBenefitsStart, rechargeBenefitsEnd],
+  );
+
+  static const LinearGradient rechargeButtonGradient = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [purpleLight, countryHeaderEnd],
+  );
 }

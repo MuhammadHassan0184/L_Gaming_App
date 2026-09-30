@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lgm/features_slices/Country_Select/country_screen.dart';
 import 'package:lgm/features_slices/Home/ludo_home_screen.dart';
+import 'package:lgm/features_slices/Recharge/recharge_screen.dart';
 import 'package:zi_core/zi_core_io.dart';
 import '../app_shell/app_shell_io.dart';
 
@@ -18,12 +19,14 @@ class _NameAppViewState extends State<NameAppView> {
     // GlobalWidgets(),
     LudoHomeScreen(),
     CountryScreen(),
+    RechargeScreen(),
     MenuView(), 
     ];
   List<TabItem> mainPages = [
     // TabItem(icon: Icons.dashboard_rounded, title: 'Menu'),
     TabItem(icon: Icons.home, title: 'Home'),
     TabItem(icon: Icons.flag, title: 'Country'),
+    TabItem(icon: Icons.wallet, title: 'Recharge'),
     TabItem(icon: Icons.menu, title: 'Menu'),
   ];
 
