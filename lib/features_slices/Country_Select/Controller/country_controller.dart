@@ -3,11 +3,20 @@ import 'package:get/get.dart';
 import '../Models/country_model.dart';
 
 class CountryController extends GetxController {
-  static const List<String> _screenUpdateIds = [
+  static const List<String> _allScreenUpdateIds = [
     'country_header',
     'country_categories',
     'country_grid',
   ];
+  static const List<String> _topTabUpdateIds = [
+    'country_header',
+    'country_grid',
+  ];
+  static const List<String> _categoryUpdateIds = [
+    'country_categories',
+    'country_grid',
+  ];
+  static const List<String> _gridUpdateIds = ['country_grid'];
 
   // ============================================================
   // CURRENT STATE
@@ -343,22 +352,22 @@ class CountryController extends GetxController {
 
   void changeTopTab(String tab) {
     selectedTopTab = tab;
-    _updateCountryScreen();
+    _updateCountryScreen(_topTabUpdateIds);
   }
 
   void changeCategory(String category) {
     selectedCategory = category;
-    _updateCountryScreen();
+    _updateCountryScreen(_categoryUpdateIds);
   }
 
   void searchCountries(String query) {
     searchQuery = query;
-    _updateCountryScreen();
+    _updateCountryScreen(_gridUpdateIds);
   }
 
   void clearSearch() {
     searchQuery = '';
-    _updateCountryScreen();
+    _updateCountryScreen(_gridUpdateIds);
   }
 
   void selectCountry(CountryModel country) {
@@ -369,11 +378,11 @@ class CountryController extends GetxController {
     selectedCategory = 'All';
     searchQuery = '';
 
-    _updateCountryScreen();
+    _updateCountryScreen(_allScreenUpdateIds);
   }
 
-  void _updateCountryScreen() {
-    update(_screenUpdateIds);
+  void _updateCountryScreen(List<String> ids) {
+    update(ids);
   }
 
   bool isSelected(CountryModel country) {

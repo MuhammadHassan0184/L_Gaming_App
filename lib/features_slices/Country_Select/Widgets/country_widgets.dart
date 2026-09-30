@@ -474,7 +474,7 @@ class _AnimatedTopTab extends StatelessWidget {
               duration: const Duration(milliseconds: 220),
               curve: Curves.easeOut,
               style: TextStyle(
-                fontSize: context.scaledFont(11.5),
+                fontSize: context.scaledFont(13),
                 fontWeight: selected ? FontWeight.w500 : FontWeight.w400,
                 color: selected
                     ? AppColors.countryText
@@ -490,7 +490,7 @@ class _AnimatedTopTab extends StatelessWidget {
             // ======================================================
             AnimatedContainer(
               duration: const Duration(milliseconds: 280),
-              curve: Curves.easeOutBack,
+              curve: Curves.easeOutCubic,
               width: selected ? context.widthPct(0.045) : 0,
               height: context.heightPct(0.0015),
               decoration: BoxDecoration(
@@ -600,7 +600,7 @@ class _AnimatedCategory extends StatelessWidget {
         duration: const Duration(milliseconds: 260),
         curve: Curves.easeOutCubic,
         alignment: Alignment.center,
-        padding: context.responsivePadding(horizontal: 0.008),
+        padding: context.responsivePadding(horizontal: 0.019),
         decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(
@@ -613,7 +613,7 @@ class _AnimatedCategory extends StatelessWidget {
           duration: const Duration(milliseconds: 220),
           curve: Curves.easeOut,
           style: TextStyle(
-            fontSize: context.scaledFont(11),
+            fontSize: context.scaledFont(12),
             fontWeight: selected ? FontWeight.w500 : FontWeight.w400,
             color: selected
                 ? AppColors.countryText
@@ -717,7 +717,7 @@ class CountrySearchDelegate extends SearchDelegate<String?> {
         physics: const BouncingScrollPhysics(),
         padding: context.responsivePadding(horizontal: 0.030, vertical: 0.015),
         itemCount: results.length,
-        separatorBuilder: (_, __) {
+        separatorBuilder: (_, _) {
           return SizedBox(height: context.heightPct(0.010));
         },
         itemBuilder: (context, index) {
